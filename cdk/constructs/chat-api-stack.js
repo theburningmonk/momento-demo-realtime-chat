@@ -71,7 +71,8 @@ class ChatApiStack extends Stack {
       environment: {
         SERVICE_NAME: props.serviceName,
         STAGE_NAME: props.stageName,
-        POWERTOOLS_LOG_LEVEL: props.stageName === 'prod' ? 'INFO' : 'DEBUG'
+        POWERTOOLS_LOG_LEVEL: props.stageName === 'prod' ? 'INFO' : 'DEBUG',
+        CHATS_TABLE_NAME: this.chatsTable.tableName
       }
     });
 
@@ -89,7 +90,8 @@ class ChatApiStack extends Stack {
       environment: {
         SERVICE_NAME: props.serviceName,
         STAGE_NAME: props.stageName,
-        POWERTOOLS_LOG_LEVEL: props.stageName === 'prod' ? 'INFO' : 'DEBUG'
+        POWERTOOLS_LOG_LEVEL: props.stageName === 'prod' ? 'INFO' : 'DEBUG',
+        CHATS_TABLE_NAME: this.chatsTable.tableName
       }
     });
 
