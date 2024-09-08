@@ -2,15 +2,15 @@ const amplifyConfig = {
   // Replace with your own Cognito configuration
   Auth: {
     region: 'us-east-1',
-    userPoolId: 'us-east-1_G8NtOCSFT',
-    userPoolWebClientId: '6g7gg9aah5gig54iu0guvfpocd',    
-    signUpVerificationMethod: "code"    
+    userPoolId: process.env.VUE_APP_USER_POOL_ID,
+    userPoolWebClientId: process.env.VUE_APP_USER_POOL_CLIENT_ID,
+    signUpVerificationMethod: "code"
   }
 }
 
 const apiConfig = {
   // Replace with your own API Gateway URL
-  apiUrl: 'https://nc3s3fw3ee.execute-api.us-east-1.amazonaws.com/dev'
+  apiUrl: process.env.VUE_APP_API_URL
 }
 
 export {
